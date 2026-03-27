@@ -1,0 +1,12 @@
+/Users/mjamik/Downloads/evalution/ShopeSphere-microservices/auth-service/src/main/java/com/lpu/shopsphere/auth/AuthServiceApplication.java
+/Users/mjamik/Downloads/evalution/ShopeSphere-microservices/auth-service/src/main/java/com/lpu/shopsphere/auth/config/CorsConfig.java
+/Users/mjamik/Downloads/evalution/ShopeSphere-microservices/auth-service/src/main/java/com/lpu/shopsphere/auth/config/OpenApiVersionConfig.java
+/Users/mjamik/Downloads/evalution/ShopeSphere-microservices/auth-service/src/main/java/com/lpu/shopsphere/auth/controller/AuthController.java
+/Users/mjamik/Downloads/evalution/ShopeSphere-microservices/auth-service/src/main/java/com/lpu/shopsphere/auth/domain/User.java
+/Users/mjamik/Downloads/evalution/ShopeSphere-microservices/auth-service/src/main/java/com/lpu/shopsphere/auth/domain/UserRole.java
+/Users/mjamik/Downloads/evalution/ShopeSphere-microservices/auth-service/src/main/java/com/lpu/shopsphere/auth/dto/AuthResponse.java
+/Users/mjamik/Downloads/evalution/ShopeSphere-microservices/auth-service/src/main/java/com/lpu/shopsphere/auth/dto/LoginRequest.java
+/Users/mjamik/Downloads/evalution/ShopeSphere-microservices/auth-service/src/main/java/com/lpu/shopsphere/auth/dto/SignupRequest.java
+/Users/mjamik/Downloads/evalution/ShopeSphere-microservices/auth-service/src/main/java/com/lpu/shopsphere/auth/exception/GlobalExceptionHandler.java
+/Users/mjamik/Downloads/evalution/ShopeSphere-microservices/auth-service/src/main/java/com/lpu/shopsphere/auth/repo/UserRepository.java
+/Users/mjamik/Downloads/evalution/ShopeSphere-microservices/auth-service/src/main/java/com/lpu/shopsphere/auth/security/JwtUtil.java

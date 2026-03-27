@@ -1,0 +1,31 @@
+# ─── Admin Service ────────────────────────────────────────────────────────────
+FROM eclipse-temurin:17-jdk AS builder
+WORKDIR /build
+
+# Copy pom first for better caching
+COPY pom.xml .
+RUN apt-get update && apt-get install -y maven && \
+    mvn -q dependency:resolve
+
+# Copy source code
+COPY src ./src
+
+# Build application
+RUN mvn -q -DskipTests clean package
+
+# Runtime stage
+FROM eclipse-temurin:17-jre
+WORKDIR /app
+
+# Copy jar from builder
+COPY --from=builder /build/target/*.jar app.jar
+
+# Create app user for security
+RUN groupadd -r appuser && useradd -r -g appuser appuser
+USER appuser
+
+EXPOSE 8084
+ENTRYPOINT ["java", "-jar", "app.jar"]
+HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=3 \
+    CMD wget --quiet --tries=1 --spider http://localhost:8084/actuator/health || exit 1
+
