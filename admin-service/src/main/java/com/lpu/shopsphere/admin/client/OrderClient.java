@@ -23,8 +23,20 @@ public interface OrderClient {
       @RequestHeader("X-User-Role") String role
   );
 
-  @GetMapping("/admin/orders")
+  @GetMapping("/orders/admin/orders")
   Object getAllOrders(
+      @RequestHeader("X-User-Email") String email,
+      @RequestHeader("X-User-Role") String role
+  );
+
+  @GetMapping("/orders/admin/dashboard")
+  Object getDashboard(
+      @RequestHeader("X-User-Email") String email,
+      @RequestHeader("X-User-Role") String role
+  );
+
+  @GetMapping("/orders/admin/reports")
+  Object getReports(
       @RequestHeader("X-User-Email") String email,
       @RequestHeader("X-User-Role") String role
   );

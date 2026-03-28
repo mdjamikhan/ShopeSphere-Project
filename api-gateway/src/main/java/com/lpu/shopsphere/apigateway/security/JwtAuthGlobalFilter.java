@@ -52,9 +52,11 @@ public class JwtAuthGlobalFilter implements GlobalFilter, Ordered {
         "/gateway/auth/v3/api-docs",
         "/gateway/catalog/v3/api-docs",
         "/gateway/orders/v3/api-docs",
+        "/gateway/admin/v3/api-docs",
         "/gateway/auth/v3/api-docs/**",
         "/gateway/catalog/v3/api-docs/**",
-        "/gateway/orders/v3/api-docs/**"
+        "/gateway/orders/v3/api-docs/**",
+        "/gateway/admin/v3/api-docs/**"
     );
     
 

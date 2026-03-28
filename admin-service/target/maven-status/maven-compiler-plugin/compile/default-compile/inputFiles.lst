@@ -1,11 +1,14 @@
-/Users/mjamik/Downloads/evalution/ShopeSphere-microservices/admin-service/src/main/java/com/lpu/shopsphere/admin/AdminServiceApplication.java
-/Users/mjamik/Downloads/evalution/ShopeSphere-microservices/admin-service/src/main/java/com/lpu/shopsphere/admin/config/OpenApiVersionConfig.java
-/Users/mjamik/Downloads/evalution/ShopeSphere-microservices/admin-service/src/main/java/com/lpu/shopsphere/admin/config/RestClientConfig.java
-/Users/mjamik/Downloads/evalution/ShopeSphere-microservices/admin-service/src/main/java/com/lpu/shopsphere/admin/dto/AdminProductRequest.java
-/Users/mjamik/Downloads/evalution/ShopeSphere-microservices/admin-service/src/main/java/com/lpu/shopsphere/admin/dto/OrderStatusUpdateRequest.java
-/Users/mjamik/Downloads/evalution/ShopeSphere-microservices/admin-service/src/main/java/com/lpu/shopsphere/admin/dto/ProductDto.java
-/Users/mjamik/Downloads/evalution/ShopeSphere-microservices/admin-service/src/main/java/com/lpu/shopsphere/admin/exception/GlobalExceptionHandler.java
-/Users/mjamik/Downloads/evalution/ShopeSphere-microservices/admin-service/src/main/java/com/lpu/shopsphere/admin/security/SecurityConfig.java
-/Users/mjamik/Downloads/evalution/ShopeSphere-microservices/admin-service/src/main/java/com/lpu/shopsphere/admin/security/UserHeaderAuthFilter.java
-/Users/mjamik/Downloads/evalution/ShopeSphere-microservices/admin-service/src/main/java/com/lpu/shopsphere/admin/service/AuthenticatedUserService.java
-/Users/mjamik/Downloads/evalution/ShopeSphere-microservices/admin-service/src/main/java/com/lpu/shopsphere/admin/service/UserRole.java
+/Users/mjamik/Desktop/finalChecker2 copy 2/admin-service/src/main/java/com/lpu/shopsphere/admin/AdminServiceApplication.java
+/Users/mjamik/Desktop/finalChecker2 copy 2/admin-service/src/main/java/com/lpu/shopsphere/admin/client/CatalogClient.java
+/Users/mjamik/Desktop/finalChecker2 copy 2/admin-service/src/main/java/com/lpu/shopsphere/admin/client/OrderClient.java
+/Users/mjamik/Desktop/finalChecker2 copy 2/admin-service/src/main/java/com/lpu/shopsphere/admin/config/OpenApiVersionConfig.java
+/Users/mjamik/Desktop/finalChecker2 copy 2/admin-service/src/main/java/com/lpu/shopsphere/admin/config/RestClientConfig.java
+/Users/mjamik/Desktop/finalChecker2 copy 2/admin-service/src/main/java/com/lpu/shopsphere/admin/controller/AdminController.java
+/Users/mjamik/Desktop/finalChecker2 copy 2/admin-service/src/main/java/com/lpu/shopsphere/admin/dto/AdminProductRequest.java
+/Users/mjamik/Desktop/finalChecker2 copy 2/admin-service/src/main/java/com/lpu/shopsphere/admin/dto/OrderStatusUpdateRequest.java
+/Users/mjamik/Desktop/finalChecker2 copy 2/admin-service/src/main/java/com/lpu/shopsphere/admin/dto/ProductDto.java
+/Users/mjamik/Desktop/finalChecker2 copy 2/admin-service/src/main/java/com/lpu/shopsphere/admin/exception/GlobalExceptionHandler.java
+/Users/mjamik/Desktop/finalChecker2 copy 2/admin-service/src/main/java/com/lpu/shopsphere/admin/security/SecurityConfig.java
+/Users/mjamik/Desktop/finalChecker2 copy 2/admin-service/src/main/java/com/lpu/shopsphere/admin/security/UserHeaderAuthFilter.java
+/Users/mjamik/Desktop/finalChecker2 copy 2/admin-service/src/main/java/com/lpu/shopsphere/admin/service/AuthenticatedUserService.java
+/Users/mjamik/Desktop/finalChecker2 copy 2/admin-service/src/main/java/com/lpu/shopsphere/admin/service/UserRole.java

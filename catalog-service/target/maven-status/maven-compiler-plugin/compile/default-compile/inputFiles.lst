@@ -1,12 +1,15 @@
-/Users/mjamik/Downloads/evalution/ShopeSphere-microservices/catalog-service/src/main/java/com/lpu/shopsphere/catalog/CatalogServiceApplication.java
-/Users/mjamik/Downloads/evalution/ShopeSphere-microservices/catalog-service/src/main/java/com/lpu/shopsphere/catalog/config/OpenApiVersionConfig.java
-/Users/mjamik/Downloads/evalution/ShopeSphere-microservices/catalog-service/src/main/java/com/lpu/shopsphere/catalog/controller/CatalogController.java
-/Users/mjamik/Downloads/evalution/ShopeSphere-microservices/catalog-service/src/main/java/com/lpu/shopsphere/catalog/domain/Category.java
-/Users/mjamik/Downloads/evalution/ShopeSphere-microservices/catalog-service/src/main/java/com/lpu/shopsphere/catalog/domain/Product.java
-/Users/mjamik/Downloads/evalution/ShopeSphere-microservices/catalog-service/src/main/java/com/lpu/shopsphere/catalog/dto/AdminProductRequest.java
-/Users/mjamik/Downloads/evalution/ShopeSphere-microservices/catalog-service/src/main/java/com/lpu/shopsphere/catalog/exception/GlobalExceptionHandler.java
-/Users/mjamik/Downloads/evalution/ShopeSphere-microservices/catalog-service/src/main/java/com/lpu/shopsphere/catalog/repo/CategoryRepository.java
-/Users/mjamik/Downloads/evalution/ShopeSphere-microservices/catalog-service/src/main/java/com/lpu/shopsphere/catalog/repo/ProductRepository.java
-/Users/mjamik/Downloads/evalution/ShopeSphere-microservices/catalog-service/src/main/java/com/lpu/shopsphere/catalog/security/SecurityConfig.java
-/Users/mjamik/Downloads/evalution/ShopeSphere-microservices/catalog-service/src/main/java/com/lpu/shopsphere/catalog/security/UserHeaderAuthFilter.java
-/Users/mjamik/Downloads/evalution/ShopeSphere-microservices/catalog-service/src/main/java/com/lpu/shopsphere/catalog/service/CatalogAdminService.java
+/Users/mjamik/Desktop/finalChecker2 copy 2/catalog-service/src/main/java/com/lpu/shopsphere/catalog/CatalogServiceApplication.java
+/Users/mjamik/Desktop/finalChecker2 copy 2/catalog-service/src/main/java/com/lpu/shopsphere/catalog/config/OpenApiVersionConfig.java
+/Users/mjamik/Desktop/finalChecker2 copy 2/catalog-service/src/main/java/com/lpu/shopsphere/catalog/config/RabbitMQConfig.java
+/Users/mjamik/Desktop/finalChecker2 copy 2/catalog-service/src/main/java/com/lpu/shopsphere/catalog/controller/CatalogController.java
+/Users/mjamik/Desktop/finalChecker2 copy 2/catalog-service/src/main/java/com/lpu/shopsphere/catalog/domain/Category.java
+/Users/mjamik/Desktop/finalChecker2 copy 2/catalog-service/src/main/java/com/lpu/shopsphere/catalog/domain/Product.java
+/Users/mjamik/Desktop/finalChecker2 copy 2/catalog-service/src/main/java/com/lpu/shopsphere/catalog/dto/AdminProductRequest.java
+/Users/mjamik/Desktop/finalChecker2 copy 2/catalog-service/src/main/java/com/lpu/shopsphere/catalog/exception/GlobalExceptionHandler.java
+/Users/mjamik/Desktop/finalChecker2 copy 2/catalog-service/src/main/java/com/lpu/shopsphere/catalog/messaging/OrderPlacedEvent.java
+/Users/mjamik/Desktop/finalChecker2 copy 2/catalog-service/src/main/java/com/lpu/shopsphere/catalog/messaging/OrderPlacedEventListener.java
+/Users/mjamik/Desktop/finalChecker2 copy 2/catalog-service/src/main/java/com/lpu/shopsphere/catalog/repo/CategoryRepository.java
+/Users/mjamik/Desktop/finalChecker2 copy 2/catalog-service/src/main/java/com/lpu/shopsphere/catalog/repo/ProductRepository.java
+/Users/mjamik/Desktop/finalChecker2 copy 2/catalog-service/src/main/java/com/lpu/shopsphere/catalog/security/SecurityConfig.java
+/Users/mjamik/Desktop/finalChecker2 copy 2/catalog-service/src/main/java/com/lpu/shopsphere/catalog/security/UserHeaderAuthFilter.java
+/Users/mjamik/Desktop/finalChecker2 copy 2/catalog-service/src/main/java/com/lpu/shopsphere/catalog/service/CatalogAdminService.java

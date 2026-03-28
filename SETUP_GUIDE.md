@@ -9,6 +9,7 @@ ShopeSphere is a Spring Boot microservices architecture with the following compo
 - **Order Service**: Order processing (port 8083)
 - **Admin Service**: Administrative operations with Feign clients (port 8084)
 - **Eureka Server**: Service discovery (port 8761)
+- **Zipkin**: Distributed tracing (port 9411)
 - **MySQL**: Persistent data storage
 - **RabbitMQ**: Message broker for event-driven communication
 
@@ -72,6 +73,9 @@ docker-compose up -d
 ```bash
 # Check Eureka Dashboard
 open http://localhost:8761
+
+# Check Zipkin Dashboard
+open http://localhost:9411
 
 # Check API Gateway
 curl http://localhost:8080/gateway/catalog/products
@@ -206,6 +210,13 @@ docker-compose logs -f order-service
 
 ### Eureka Dashboard
 Visit `http://localhost:8761` to see all registered services and their status.
+
+### Zipkin Dashboard
+Visit `http://localhost:9411` to view distributed traces across all microservices. You can:
+- Search for traces by service name, tags, or duration
+- View detailed span information for each request
+- Analyze performance bottlenecks and latency issues
+- Debug inter-service communication problems
 
 ## Troubleshooting
 

@@ -13,6 +13,7 @@ docker-compose up -d
 - **Order Service**: http://localhost:8083
 - **Admin Service**: http://localhost:8084
 - **Eureka Server**: http://localhost:8761
+- **Zipkin**: http://localhost:9411
 - **MySQL**: localhost:3306
 - **RabbitMQ**: localhost:5672 (amqp), 15672 (management)
 
@@ -25,6 +26,24 @@ curl http://localhost:8082/actuator/health  # Catalog Service
 curl http://localhost:8081/actuator/health  # Auth Service
 curl http://localhost:8080/actuator/health  # API Gateway
 ```
+
+## 📊 Zipkin Distributed Tracing
+```bash
+# Access Zipkin UI
+open http://localhost:9411
+
+# View recent traces
+# Make API calls through gateway and see traces in Zipkin
+curl -X GET http://localhost:8080/gateway/catalog/products \
+  -H "Authorization: Bearer <token>"
+```
+
+### Tracing Features
+- **Micrometer Tracing**: OpenTelemetry-based distributed tracing
+- **100% Sampling**: All requests are traced for development
+- **Service Dependencies**: Visualize inter-service communication
+- **Latency Analysis**: Identify performance bottlenecks
+- **Error Tracking**: Debug failed requests across services
 
 ## 🔌 Feign Client Usage (Admin Service)
 
@@ -191,6 +210,7 @@ Catalog Service (load-balanced)
 - ✓ Feign clients for inter-service communication
 - ✓ Docker multi-stage builds for all services
 - ✓ Health checks and monitoring
+- ✓ Zipkin distributed tracing
 - ✓ Environment-based configuration
 - ✓ JWT-based security
 

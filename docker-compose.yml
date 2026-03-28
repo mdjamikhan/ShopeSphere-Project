@@ -1,19 +1,19 @@
 version: "3.9"
 
-# ─── Shared network ───────────────────────────────────────────────────────────
+ 
 networks:
   shopsphere-net:
     driver: bridge
 
-# ─── Named volumes ────────────────────────────────────────────────────────────
+ 
 volumes:
   mysql-data:
   rabbitmq-data:
 
-# ─── Services ─────────────────────────────────────────────────────────────────
+ 
 services:
 
-  # ── MySQL ────────────────────────────────────────────────────────────────────
+ 
   mysql:
     image: mysql:8.0
     container_name: shopsphere-mysql
@@ -22,7 +22,7 @@ services:
       MYSQL_ROOT_PASSWORD: ${DB_PASSWORD:-Jamikhan@09}
       MYSQL_DATABASE: authService
     ports:
-      - "3306:3306"
+      - "3307:3306"  # avoid conflict with host MySQL
     volumes:
       - mysql-data:/var/lib/mysql
       - ./init-db.sql:/docker-entrypoint-initdb.d/init-db.sql:ro
@@ -34,8 +34,7 @@ services:
       timeout: 5s
       retries: 10
       start_period: 30s
-
-  # ── RabbitMQ ─────────────────────────────────────────────────────────────────
+ 
   rabbitmq:
     image: rabbitmq:3.13-management-alpine
     container_name: shopsphere-rabbitmq
@@ -44,8 +43,8 @@ services:
       RABBITMQ_DEFAULT_USER: ${RABBITMQ_USERNAME:-guest}
       RABBITMQ_DEFAULT_PASS: ${RABBITMQ_PASSWORD:-guest}
     ports:
-      - "5672:5672"     # AMQP
-      - "15672:15672"   # Management UI  →  http://localhost:15672
+      - "5672:5672"      
+      - "15672:15672"    
     volumes:
       - rabbitmq-data:/var/lib/rabbitmq
     networks:
@@ -57,7 +56,24 @@ services:
       retries: 10
       start_period: 20s
 
-  # ── Eureka Server ─────────────────────────────────────────────────────────────
+  # ── Zipkin ───────────────────────────────────────────────────────────────────
+  zipkin:
+    image: openzipkin/zipkin:latest
+    container_name: shopsphere-zipkin
+    restart: unless-stopped
+    ports:
+      - "9411:9411"
+    networks:
+      - shopsphere-net
+    environment:
+      - STORAGE_TYPE=mem
+    healthcheck:
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost:9411/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+
   eureka-server:
     build:
       context: ./eureka-server
@@ -75,7 +91,7 @@ services:
       retries: 8
       start_period: 60s
 
-  # ── Auth Service ──────────────────────────────────────────────────────────────
+   
   auth-service:
     build:
       context: ./auth-service
@@ -99,7 +115,7 @@ services:
     networks:
       - shopsphere-net
 
-  # ── Catalog Service ───────────────────────────────────────────────────────────
+   
   catalog-service:
     build:
       context: ./catalog-service
@@ -127,7 +143,7 @@ services:
     networks:
       - shopsphere-net
 
-  # ── Order Service ─────────────────────────────────────────────────────────────
+   
   order-service:
     build:
       context: ./order-service
@@ -155,7 +171,7 @@ services:
     networks:
       - shopsphere-net
 
-  # ── Admin Service ─────────────────────────────────────────────────────────────
+   
   admin-service:
     build:
       context: ./admin-service
@@ -173,7 +189,7 @@ services:
     networks:
       - shopsphere-net
 
-  # ── API Gateway ───────────────────────────────────────────────────────────────
+  
   api-gateway:
     build:
       context: ./api-gateway

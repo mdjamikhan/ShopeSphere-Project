@@ -1,4 +1,12 @@
-com/lpu/shopsphere/auth/config/OpenApiVersionConfig$1.class
+com/lpu/shopsphere/auth/controller/AuthController.class
+com/lpu/shopsphere/auth/AuthServiceApplication.class
+com/lpu/shopsphere/auth/domain/UserRole.class
+com/lpu/shopsphere/auth/repo/UserRepository.class
 com/lpu/shopsphere/auth/exception/GlobalExceptionHandler.class
+com/lpu/shopsphere/auth/dto/LoginRequest.class
+com/lpu/shopsphere/auth/dto/AuthResponse.class
+com/lpu/shopsphere/auth/domain/User.class
+com/lpu/shopsphere/auth/dto/SignupRequest.class
 com/lpu/shopsphere/auth/config/CorsConfig.class
 com/lpu/shopsphere/auth/config/OpenApiVersionConfig.class
+com/lpu/shopsphere/auth/security/JwtUtil.class

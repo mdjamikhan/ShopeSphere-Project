@@ -1,3 +1,16 @@
-com/lpu/shopsphere/admin/config/OpenApiVersionConfig$1.class
+com/lpu/shopsphere/admin/security/UserHeaderAuthFilter.class
+com/lpu/shopsphere/admin/controller/AdminController.class
 com/lpu/shopsphere/admin/exception/GlobalExceptionHandler.class
+com/lpu/shopsphere/admin/security/SecurityConfig.class
+com/lpu/shopsphere/admin/dto/ProductDto$CategoryDto.class
+com/lpu/shopsphere/admin/dto/OrderStatusUpdateRequest$OrderStatus.class
+com/lpu/shopsphere/admin/dto/OrderStatusUpdateRequest.class
+com/lpu/shopsphere/admin/AdminServiceApplication.class
+com/lpu/shopsphere/admin/service/UserRole.class
+com/lpu/shopsphere/admin/client/OrderClient.class
 com/lpu/shopsphere/admin/config/OpenApiVersionConfig.class
+com/lpu/shopsphere/admin/dto/ProductDto.class
+com/lpu/shopsphere/admin/service/AuthenticatedUserService.class
+com/lpu/shopsphere/admin/config/RestClientConfig.class
+com/lpu/shopsphere/admin/dto/AdminProductRequest.class
+com/lpu/shopsphere/admin/client/CatalogClient.class

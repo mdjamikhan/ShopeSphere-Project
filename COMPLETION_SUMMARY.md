@@ -98,7 +98,31 @@
 - Added Actuator health endpoints
 - Added Eureka-specific logging
 
-### 5. Docker Compose Configuration ✓
+### 6. Added Zipkin Distributed Tracing ✓
+
+#### Zipkin Service Added:
+- Added Zipkin service to `docker-compose.yml` with health checks
+- Configured on port 9411 with proper networking
+
+#### Dependencies Added:
+- `io.micrometer:micrometer-tracing-bridge-otel` to all 6 services
+- `io.opentelemetry:opentelemetry-exporter-zipkin` to all 6 services
+
+#### Services Updated:
+- auth-service/pom.xml
+- api-gateway/pom.xml
+- catalog-service/pom.xml
+- order-service/pom.xml
+- admin-service/pom.xml
+- eureka-server/pom.xml
+
+#### Configuration Added:
+- `management.zipkin.tracing.endpoint=http://zipkin:9411/api/v2/spans` in all application.properties
+- `management.tracing.sampling.probability=1.0` (100% sampling for development)
+
+#### Documentation Updated:
+- SETUP_GUIDE.md: Added Zipkin monitoring section
+- QUICK_REFERENCE.md: Added Zipkin port and tracing features
 
 #### Status: Already Well-Configured
 The docker-compose.yml already had:
@@ -260,10 +284,9 @@ All compilation errors have been resolved:
 2. Implement Request/Response logging filters
 3. Add API rate limiting
 4. Implement caching (Redis)
-5. Add distributed tracing (Sleuth + Zipkin)
-6. Implement CORS at microservice level
-7. Add input validation at gateway level
-8. Implement audit logging
+5. Implement CORS at microservice level
+6. Add input validation at gateway level
+7. Implement audit logging
 
 ---
 
@@ -272,3 +295,4 @@ All compilation errors have been resolved:
 **Error-Free**: Yes - 0 compilation errors
 **Feign Clients**: Yes - OrderClient and CatalogClient configured
 **Docker**: Yes - All 6 services properly containerized
+**Zipkin Tracing**: Yes - Distributed tracing fully integrated

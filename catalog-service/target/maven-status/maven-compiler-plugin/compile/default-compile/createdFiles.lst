@@ -1,4 +1,16 @@
+com/lpu/shopsphere/catalog/controller/CatalogController.class
+com/lpu/shopsphere/catalog/domain/Category.class
 com/lpu/shopsphere/catalog/exception/GlobalExceptionHandler.class
-com/lpu/shopsphere/catalog/config/OpenApiVersionConfig$1.class
+com/lpu/shopsphere/catalog/messaging/OrderPlacedEvent$OrderItemDto.class
+com/lpu/shopsphere/catalog/messaging/OrderPlacedEventListener.class
+com/lpu/shopsphere/catalog/security/SecurityConfig.class
 com/lpu/shopsphere/catalog/service/CatalogAdminService.class
+com/lpu/shopsphere/catalog/CatalogServiceApplication.class
 com/lpu/shopsphere/catalog/config/OpenApiVersionConfig.class
+com/lpu/shopsphere/catalog/domain/Product.class
+com/lpu/shopsphere/catalog/dto/AdminProductRequest.class
+com/lpu/shopsphere/catalog/config/RabbitMQConfig.class
+com/lpu/shopsphere/catalog/messaging/OrderPlacedEvent.class
+com/lpu/shopsphere/catalog/repo/ProductRepository.class
+com/lpu/shopsphere/catalog/repo/CategoryRepository.class
+com/lpu/shopsphere/catalog/security/UserHeaderAuthFilter.class
